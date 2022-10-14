@@ -3,16 +3,12 @@
     padding: 0px;
 }
 
-.link-nav-container {
-    margin-right: 30%;
-}
-
 .link-nav {
+    align-content: flex-start;
     display: flex;
-    justify-content: space-between;
-    width: 70%;
+    justify-content: space-around;
 }
 
 .nav-item {
-    
+    text-decoration: none;
 }
