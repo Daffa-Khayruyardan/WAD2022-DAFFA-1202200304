@@ -1,0 +1,18 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.link-nav-container {
+    margin-right: 30%;
+}
+
+.link-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.nav-item {
+    
+}
