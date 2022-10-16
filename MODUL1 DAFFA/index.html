@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
         <title>EAD Application</title>
     </head>
@@ -123,10 +123,10 @@
                     <div class="card-content">
                         <img class="car-img" src="./Images/honda-freed.jpeg" alt="tesla" width="200" height="100">
                         <div class="desc">
-                            <h5 >Toyota Soluna</h5>
-                            <p>Mulai dari IDR 400.000/hari</p>
+                            <h5 >Honda Freed</h5>
+                            <p>Mulai dari IDR 600.000/hari</p>
                             <ul class="spec">
-                                <li>4 Kursi</li>
+                                <li>7 Kursi</li>
                                 <li>1.5000 CC</li>
                                 <li>Automatic</li>
                             </ul>
@@ -140,17 +140,41 @@
             <h2 class="text-center mt-5">Pendaftaran Mobil</h2>
             <form action="" class="form-regist">
                 <label class="mb-2">Email Address</label></br>
-                <input type="text">
+                <input id="input-form" name="email" value="" type="text">
                 <label class="mb-2">Nama Lengkap</label></br>
-                <input type="text">
+                <input id="input-form" name="name" value="" type="text">
                 <label class="mb-2">No HP</label></br>
-                <input type="text">
+                <input id="input-form" name="phone-number" value="" type="text">
                 <label class="mb-2">Alamat</label></br>
                 <textarea cols="80" rows="4"></textarea>
                 <label class="mb-2">Jenis Mobil</label></br>
-
-                <button class="mt-4 btn btn-primary">Submit</button>
+                <select name="type-of-car" id="car-type">
+                    <option value="Honda City">Honda City</option>
+                    <option value="Toyota Soluna">Toyota Soluna</option>
+                    <option value="Mazda 2">Mazda 2</option>
+                    <option value="Honda Freed">Honda Freed</option>
+                </select></br>
+                <label class="mb-2 mt-3">Membutuhkan Supir?</label></br>
+                <input id="check-input" name="email" value="Ya" type="checkbox">
+                <label>Ya</label>
+                <input id="check-input" name="email" value="Ya" type="checkbox">
+                <label class="mb-2">Tidak</label></br>
+                <button class="mt-2 btn btn-primary">Submit</button>
             </form>
         </section>
+        <!-- Modal/Popup -->
+        <div class="modal fade" id="copyright">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright Here -->
+        <footer class="copyright-user">
+            <button type="button" data-bs-toggle="modal" data-bs-target="copyright">Copyright 2022 (MOHAMMAD DAFFA KHAYRUYARDAN_1202200304_SI4408)</button>
+        </footer>
     </body>
 </html>

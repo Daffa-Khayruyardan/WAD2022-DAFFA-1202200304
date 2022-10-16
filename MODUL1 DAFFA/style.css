@@ -90,8 +90,32 @@
     width: 49%;
 }
 
-.form-regist input {
+#input-form {
     width: 100%;
     margin-bottom: 2%;
     font-size: 21px;
+}
+
+#car-type {
+    width: 100%;
+}
+
+.copyright-user {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    background-color: aliceblue;
+    height: 12%;
+    padding-bottom: 4%;
+}
+
+.check-input {
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.copyright-user button {
+    padding-top: 1%;
+    background-color: aliceblue;
+    border: none;
 }
