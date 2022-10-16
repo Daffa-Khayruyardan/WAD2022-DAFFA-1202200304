@@ -3,6 +3,95 @@
     padding: 0px;
 }
 
-.link-nav-container {
+.navbar-app {
+    background-color: aliceblue;
+}
+
+.nav-link-container {
+    
+}
+
+.video-container {
+    margin-top: 60px;
     display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 23%;
+}
+
+.tentang-kami {
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+.about-me {
+    background-color: aliceblue;
+    padding-top: 4%;
+    padding-bottom: 3%;
+}
+
+.tentang-kami th {
+    text-align: center;
+    font-size: 20px;
+}
+
+.tentang-kami td {
+    width: 20%;
+    padding-top: 3%;
+    text-align: justify;
+    word-wrap: break-word;
+    padding-left: 2%;
+}
+
+.type {
+    padding-bottom: 8%;
+}
+
+.card {
+    padding-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.card-content {
+    display: flex;
+    padding-right: 80px;
+}
+
+.jenis-mobil {
+    background-color: aliceblue;
+    padding-top: 1%;
+}
+
+.tipe-mobil {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.car-img {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.spec li {
+    color: cornflowerblue;
+}
+
+/*form-regits*/
+
+.regist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-regist {
+    width: 49%;
+}
+
+.form-regist input {
+    width: 100%;
+    margin-bottom: 2%;
+    font-size: 21px;
 }
