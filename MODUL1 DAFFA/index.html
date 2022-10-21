@@ -1,6 +1,6 @@
         <html>
             <head>
-                <link href="./bootstrap-5.2.2-dist/css/bootstrap.min.csss" rel="stylesheet">
+                <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.min.css">
                 <link rel="stylesheet" href="./style.css">
                 <title>EAD Application</title>
             </head>
@@ -9,24 +9,22 @@
                 <div class="navbar navbar-expand navbar-app">
                     <div class="container-fluid">
                         <div class="container-fluid">
-                            <img class="navbar-brand" src="./Images/logo-ead.png" alt="EAD_Logo" width="100" height="40">
+                            <img class="navbar-brand" src="./Images/logo-ead.png" alt="EAD_Logo" width="100" height="40"> 
                         </div>
-                        
-                            <ul class="navbar-nav nav-link-container">
-                                <li>
-                                    <a class="nav-item" href="#about">Tentang Kami</a>
-                                </li>
-                                <li>
-                                    <a class="nav-item" href="#location">Lokasi Kami</a>
-                                </li>
-                                <li>
-                                    <a class="nav-item" href="#type">Jenis Mobil</a>
-                                </li>
-                                <li>
-                                    <a class="nav-item" href="#regist">Daftar Reservasi</a>
-                                </li>
-                            </ul>   
-                        
+                        <ul class="navbar-nav nav-link-container">
+                            <li>
+                                <a class="nav-item" href="#about">Tentang Kami</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="#location">Lokasi Kami</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="#type">Jenis Mobil</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="#regist">Daftar Reservasi</a>
+                            </li>
+                        </ul>  
                     </div>
                 </div>
                 <!-- Home Page Body -->
@@ -65,9 +63,11 @@
                 <!-- Location Body Page -->
                 <section id="location">
                     <h3 class="text-center mt-5">Lokasi Kantor Kami</h3>
-                    <div class="location-map text-center">
-                        <iframe class="mt-4 mb-5" src="https://vvv.google.com/maps/embed?pb=!1m18!1m12!1m3!1d818.2394223113522!2d107.63055940158591!3d-6.978583482344063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9f9fe6703a7%3A0x1eb72bbb3593a98c!2sKost%20Anisa%20Rizky!5e0!3m2!1sid!2sid!4v1665926820009!5m2!1sid!2sid" frameborder="0" width="420" height="230"></iframe>
+                    
+                    <div class="location-map video-container">
+                        <iframe class="mt-4 mb-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d943.1732970225759!2d107.63035771527115!3d-6.978760089716686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9f7136bdc01%3A0x13ed308c05559822!2sKost%20olive!5e0!3m2!1sid!2sid!4v1666313687335!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
+                    
                 </section>
                 <!-- Transportation Type -->
                 <section id="type" class="type jenis-mobil">
@@ -164,7 +164,7 @@
                 </section>
                 <!-- Copyright Here -->
                 <footer class="copyright-user">
-                    <button type="button" data-bs-toggle="modal" data-bs-target="copyright">Copyright 2022 (MOHAMMAD DAFFA KHAYRUYARDAN_1202200304_SI4408)</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#copyright">Copyright 2022 (MOHAMMAD DAFFA KHAYRUYARDAN_1202200304_SI4408)</button>
                 </footer>
                 <!-- Modal/Popup -->
                 <div class="modal fade" id="copyright" aria-hidden="true">
