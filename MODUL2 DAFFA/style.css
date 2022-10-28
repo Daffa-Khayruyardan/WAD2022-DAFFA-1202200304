@@ -1,0 +1,56 @@
+/* Define Beginning Setting */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Navigation Bar Setting */
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 12%;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.on {
+    color: cornflowerblue;
+}
+
+/* Homepage Card Car Layout Setting */
+.card-row {
+    width: 70%;
+}
+
+.card-car {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.card-container {
+    margin-left: 20px;
+}
+
+.button-area {
+    background-color: #f5f5f5;
+}
+
+/* Booking Layout */
+.booking-layout {
+    width: 98%;
+}
+
+.booking-form {
+    background-color: coral;
+}
+
+/* All Pages Footer Setting */
+.foot {
+    background-color: #f2f2f2;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
