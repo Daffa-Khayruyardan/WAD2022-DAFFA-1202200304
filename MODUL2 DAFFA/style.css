@@ -31,7 +31,7 @@
 }
 
 .card-container {
-    margin-left: 20px;
+    margin-left: 28%;
 }
 
 .button-area {
@@ -43,8 +43,12 @@
     width: 98%;
 }
 
+.select {
+    margin-left: 20%;
+}
+
 .booking-form {
-    background-color: coral;
+    
 }
 
 /* All Pages Footer Setting */
