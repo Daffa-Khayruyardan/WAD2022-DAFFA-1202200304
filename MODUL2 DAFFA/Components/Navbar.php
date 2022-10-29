@@ -8,14 +8,10 @@
     <div class="container-fluid">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item pt-1 pb-1 text-xl">
-                <a href="Home.php" class="<?php if(basename($_SERVER['PHP_SELF']) == 'index.php') { 
-                        echo "on";
-                    }else  {
-                        echo "off";
-                    } ?>">Home</a>
+                <a href="DAFFA_Home.php" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'DAFFA_Home.php' ? "" : "text-secondary" ?>">Home</a>
             </li>
             <li class="nav-item pt-1 pb-1 text-xl">
-                <a href="Booking.php" class="<?php if(basename($_SERVER['PHP_SELF']) == 'Home.php' ? "on" : "off"); ?>">Booking</a>
+                <a href="DAFFA_Booking.php" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'DAFFA_Booking.php' ? "" : "text-secondary"; ?>">Booking</a>
             </li>
         </ul>
     </div>

@@ -16,10 +16,6 @@
     color: white;
 }
 
-.on {
-    color: cornflowerblue;
-}
-
 /* Homepage Card Car Layout Setting */
 .card-row {
     width: 70%;
@@ -31,7 +27,7 @@
 }
 
 .card-container {
-    margin-left: 20px;
+    margin-left: 28%;
 }
 
 .button-area {
@@ -43,8 +39,13 @@
     width: 98%;
 }
 
-.booking-form {
-    background-color: coral;
+.select {
+    margin-left: 20%;
+}
+
+/* Table Invoice */
+tr {
+    border-bottom: 10px solid black;
 }
 
 /* All Pages Footer Setting */
