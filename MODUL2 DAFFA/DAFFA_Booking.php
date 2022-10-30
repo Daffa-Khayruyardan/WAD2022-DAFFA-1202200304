@@ -75,6 +75,8 @@
                     <input class="mb-1" name="check[]" type="checkbox" value="Fuel Filled">
                     <label class="small">Fuel Filled/Rp250.000</label><br>
                 </div>
+
+                <!-- Submit Button -->
                 <input type="submit" formaction="./DAFFA_MyBooking.php" value="Book" class="btn btn-success mt-2">
             </form>
         </div>

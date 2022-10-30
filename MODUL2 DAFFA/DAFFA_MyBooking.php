@@ -31,7 +31,7 @@
                     <!-- Table Data -->
                     <tbody>
                         <tr class="bg-light">
-                            <!-- Booking Number -->
+                            <!-- Display Booking Number -->
                             <th>
                                 <?php echo rand(); ?>
                             </th>
@@ -41,18 +41,18 @@
                                 <?php echo (isset($_POST["Name"])) ? $_POST["Name"] : "NAMA_NIM"?>
                             </td>
 
-                            <!-- display check in -->
+                            <!-- Display check in -->
                             <td>
                                 <?php echo (isset($_POST["bookdate"]) && $_POST["bookdate"] != "") ? date("Y-m-d H:i:s", strtotime($_POST["bookdate"] . " " . $_POST["starttime"])) : ""?>
                             </td>
 
-                            <!-- Check Out from user -->
+                            <!-- Display Check Out from user -->
                             <td>
                                 <?php 
                                     // convert duration to format that can do addition with another date
                                     $durationDays = "+ " . $_POST["duration"] . " days";
 
-                                    // make concanation bookdate with durations
+                                    // make concanation or merging bookdate with durations
                                     $checkOutDate = date("Y-m-d", strtotime($_POST["bookdate"] . $durationDays));
 
                                     // display check out date 
@@ -77,6 +77,8 @@
                                     $HondaFreed = (isset($_POST["carTypes"]) && $_POST["carTypes"] == "Honda Freed")  ? 600000 : 0;
                                 ?>
                             </td>
+
+                            <!-- Display Phone Number -->
                             <td>
                                 <?php echo (isset($_POST["phonenumber"])) ? $_POST["phonenumber"] : ""?>
                             </td>
@@ -113,6 +115,8 @@
                                 <?php 
                                     // addition all price 
                                     $summary = $HealthCost + $DriverCost + $FuelCost + $Mazda2 + $HondaCity + $HondaFreed;
+
+                                    // Display price in currency format
                                     echo "Rp. " . number_format($summary,0,'','.');
                                 ?>
                             </td>
