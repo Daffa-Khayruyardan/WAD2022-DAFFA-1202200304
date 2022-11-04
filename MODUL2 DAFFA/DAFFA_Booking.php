@@ -47,7 +47,7 @@
                             <option selected disabled>Select Car Type</option>
 
                             <!-- Mazda 2 Option -->
-                            <option value="Mazda 2" <?php echo (isset($_POST["carTypes"]) && $_POST["carTypes"] == "Mazda 2") ? "selected" : ""?>>Mazda 2</option>
+                            <option value="Mazda two" <?php echo (isset($_POST["carTypes"]) && $_POST["carTypes"] == "Mazda 2") ? "selected" : ""?>>Mazda 2</option>
                             
                             <!-- Honda City Option -->
                             <option value="Honda City" <?php echo (isset($_POST["carTypes"]) && $_POST["carTypes"] == "Honda City") ? "selected" : ""?>>Honda City</option>

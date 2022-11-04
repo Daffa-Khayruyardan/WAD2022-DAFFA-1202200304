@@ -72,7 +72,7 @@
                                             echo isset($_POST["carTypes"]) ? $_POST["carTypes"] : "";
 
                                             // set Car price 
-                                            $Mazda2 = (isset($_POST["carTypes"]) && $_POST["carTypes"] == "Mazda 2")  ? 420000 : 0;
+                                            $Mazda2 = (isset($_POST["carTypes"]) && $_POST["carTypes"] == "Mazda two")  ? 420000 : 0;
                                             $HondaCity = (isset($_POST["carTypes"]) && $_POST["carTypes"] == "Honda City")  ? 400000 : 0;
                                             $HondaFreed = (isset($_POST["carTypes"]) && $_POST["carTypes"] == "Honda Freed")  ? 600000 : 0;
                                         ?>
@@ -94,7 +94,7 @@
 
                                                 // set services price
                                                 if(isset($_POST["check"])) {
-                                                    foreach($_POST["check"] as $service) {
+                                                    foreach($_POST["check"] as $services) {
                                                         echo "<li>" . $services . "</li>"; 
 
                                                         if($services == "Health Protocol") {

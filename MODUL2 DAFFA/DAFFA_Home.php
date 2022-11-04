@@ -36,7 +36,7 @@
                                 <form action="./DAFFA_Booking.php" method="post" class="card-container pb-3">
                                     <input type="text" value="DAFFA_1202200304" name="Name" class="d-none" readonly>
                                     <select name="carTypes" class="d-none">
-                                        <option value="Mazda 2">Mazda 2</option>
+                                        <option value="Mazda two">Mazda 2</option>
                                     </select>
                                     <input type="submit" class="btn btn-primary btn-sm" value="Book Now">
                                 </form>
