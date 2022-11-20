@@ -16,20 +16,20 @@
                         <a href="../index.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? "" : "text-secondary" ?>">Home</a>
                     </li>
                     <li class="nav-item pt-3 pb-3 text-xl">
-                        <a href="../pages/Add-DAFFA.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'Add-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
+                        <a href="../pages/Add-DAFFA.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'ListCar-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
         <!-- List Car Body -->
-        <div class="container-fluid">
+        <div class="container ml-4">
             <h3>My Show Room</h3>
             <p>List Show Room Daffa - 1202200304</p>
         </div>
 
         <!-- open form here -->
-        <div class="container-fluid row">
+        <div class="container row">
 
         <!-- Looping car in cards model -->
         <?php 
@@ -37,7 +37,7 @@
 
             while($car_list = mysqli_fetch_array($list_query)) {
         ?> 
-
+        
         <!-- list of car -->
         <div class="card" class="col" style="width: 18rem;">
             <img src="../asset/images/<?php echo $car_list['foto_mobil']?>" class="card-img-top" alt="...">
@@ -69,8 +69,6 @@
 
         </div>
 
-        <?php 
-            echo "Jumlah Mobil: " . $jumlah_mobil
-        ?>
+        <div class="mt-4"><?php echo "Jumlah Mobil: " . $jumlah_mobil?></div>
     </body>
 </html>

@@ -12,20 +12,20 @@
                         <a href="../index.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? "" : "text-secondary" ?>">Home</a>
                     </li>
                     <li class="nav-item pt-3 pb-3 text-xl">
-                        <a href="pages/Add-DAFFA.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'Add-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
+                        <a href="" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'Add-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <!-- Add New Car Form -->
-        <form action="../config//insert.php" method="POST" class="ml-2 w-50 row container-fluid form-input form-group" enctype="multipart/form-data">
-            <!-- Title -->
-            <div class="container-fluid mt-2 title-add">
-                <h4>Tambah Mobil</h4>
-                <p class="title-desc">Tambah Mobil Baru Anda Ke List Show Room</p>
-            </div>
+        <!-- Title -->
+        <div class="container mt-2 title-add">
+            <h4>Tambah Mobil</h4>
+            <p class="title-desc">Tambah Mobil Baru Anda Ke List Show Room</p>
+        </div>
 
+        <!-- Add New Car Form -->
+        <form action="../config/insert.php" method="POST" class="container row" id="form-group" enctype="multipart/form-data">
             <!-- Nama Mobil -->
             <label class="mb-2"><b>Nama Mobil</b></label></br>
             <input class="mb-2 input-rounded" name="nama" type="text" ></br>

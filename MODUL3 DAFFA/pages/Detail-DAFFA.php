@@ -25,8 +25,10 @@
                 $nama_mobil = $row["nama_mobil"];
                 $pemilik_mobil = $row["pemilik_mobil"];
                 $merk_mobil = $row["merk_mobil"];
+                $tanggal = $row["tanggal_beli"];
                 $deskripsi = $row["deskripsi"];
                 $foto = $row["foto_mobil"];
+                $status = $row["status_pembayaran"];
             }
         ?>
 
@@ -38,7 +40,7 @@
                         <a href="../index.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? "" : "text-secondary" ?>">Home</a>
                     </li>
                     <li class="nav-item pt-3 pb-3 text-xl">
-                        <a href="pages/Add-DAFFA.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'Detail-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
+                        <a href="pages/ListCar-DAFFA.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'Detail-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
                     </li>
                 </ul>
             </div>
@@ -60,10 +62,10 @@
             <!-- Edit Form -->
             <form action="../pages/Edit-DAFFA.php" method="post" class="container row col">
                 <!-- post id_mobil -->
-                <input type="hidden" name="id_mobil_edit" value="<?php echo $row['id_mobil']?>">
+                <input type="hidden" name="id_mobil_edit" value="<?php echo $row['id_mobil_edit']?>">
 
                 <!-- Nama Mobil -->
-                <label class="mb-2"><b>Nama Mobil</b></label></br>
+                <label class="mb-2"><b>Nama Mobil <?php echo $foto?></b></label></br>
                 <input class="mb-2 input-rounded" value="<?php echo $nama_mobil?>" name="nama" type="text" ></br>
 
                 <!-- Pemilik -->
@@ -76,7 +78,7 @@
 
                 <!-- Tanggal Beli -->
                 <label class="mb-2"><b>Tanggal Beli</b></label></br>
-                <input class="mb-2 input-rounded" name="tanggal_beli" type="date" ></br>
+                <input class="mb-2 input-rounded" name="tanggal_beli" value="<?php echo $tanggal?>" type="date" ></br>
 
                 <!-- Deskripsi -->
                 <label class="mb-2"><b>Deskripsi</b></label></br>
@@ -84,16 +86,16 @@
 
                 <!-- Foto -->
                 <label class="mb-1"><b>Foto</b></label></br>
-                <input class="mb-2 input-rounded" type="file" name="upload" class="foto" ></br>
+                <input class="mb-2 input-rounded" type="file" name="upload" value="<?php echo $foto?>" class="foto" ></br>
 
                 <!-- Pilihan -->
                 <span>
                     <!-- Ya -->
-                    <input type="radio" name="status" value="Lunas">
+                    <input type="radio" name="status" value="Lunas" <?php echo $status == "Lunas" ? "checked" : ""?>>
                     <label>Lunas</label>
 
                     <!-- Tidak -->
-                    <input type="radio" name="status" value="Belum Lunas">
+                    <input type="radio" name="status" value="Belum Lunas" <?php echo $status == "Belum Lunas" ? "checked" : ""?>>
                     <label>Belum Lunas</label>
                 </span>
 
