@@ -23,13 +23,15 @@
         </nav>
 
         <!-- List Car Body -->
-        <div class="container ml-4">
+        <div class="container mt-4 ml-4">
             <h3>My Show Room</h3>
             <p>List Show Room Daffa - 1202200304</p>
         </div>
 
         <!-- open form here -->
-        <div class="container row">
+        <div class="container row-2">
+            <div class="row">
+                
 
         <!-- Looping car in cards model -->
         <?php 
@@ -37,27 +39,28 @@
 
             while($car_list = mysqli_fetch_array($list_query)) {
         ?> 
-        
-        <!-- list of car -->
-        <div class="card" class="col" style="width: 18rem;">
-            <img src="../asset/images/<?php echo $car_list['foto_mobil']?>" class="card-img-top" alt="...">
-            <div class="card-body">
-                <!-- car information here -->
-                <h5 class="card-title"><?php echo $car_list['nama_mobil']?></h5>
-                <p class="card-text"><?php echo $car_list['deskripsi']?></p>
+        <div class="col-4">
+            <!-- list of car -->
+            <div class="card rounded" style="width: 18rem;">
+                <img src="../asset/images/<?php echo $car_list['foto_mobil']?>" class="card-img-top rounded p-2" alt="...">
+                <div class="card-body">
+                    <!-- car information here -->
+                    <h5 class="card-title"><?php echo $car_list['nama_mobil']?></h5>
+                    <p class="card-text"><?php echo $car_list['deskripsi']?></p>
 
-                <div class="container-fluid row">
-                    <!-- get more detail -->
-                    <form action="./Detail-DAFFA.php" method="post" class="col">
-                        <input type="hidden" name="id_mobil_detail" value="<?php echo $car_list['id_mobil']?>">
-                        <input type="submit" name="detail_car" value="Detail" class="btn btn-primary">
-                    </form>
+                    <div class="container-fluid row">
+                        <!-- get more detail -->
+                        <form action="./Detail-DAFFA.php" method="post" class="col">
+                            <input type="hidden" name="id_mobil_detail" value="<?php echo $car_list['id_mobil']?>">
+                            <input type="submit" name="detail_car" value="Detail" class="btn btn-primary rounded-pill">
+                        </form>
 
-                    <!-- Input which car want to delete -->
-                    <form action="../config//delete.php" method="post" class="col">
-                        <input type="hidden" name="id_mobil_hapus" value="<?php echo $car_list['id_mobil']?>">
-                        <input type="submit" name="delete_car" value="Delete" class="btn btn-danger">
-                    </form>
+                        <!-- Input which car want to delete -->
+                        <form action="../config//delete.php" method="post" class="col">
+                            <input type="hidden" name="id_mobil_hapus" value="<?php echo $car_list['id_mobil']?>">
+                            <input type="submit" name="delete_car" value="Delete" class="btn btn-danger rounded-pill">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,10 +68,11 @@
         <!-- end of list -->
         <?php 
             }
-        ?>
-
+        ?>  
+                
+            </div>
         </div>
 
-        <div class="mt-4"><?php echo "Jumlah Mobil: " . $jumlah_mobil?></div>
+        <div class="mt-4 container ml-4"><?php echo "Jumlah Mobil: " . $jumlah_mobil?></div>
     </body>
 </html>

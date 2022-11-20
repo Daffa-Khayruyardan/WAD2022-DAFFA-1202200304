@@ -26,6 +26,8 @@
         $photo_path = "../asset/images/".$foto;
         unlink($photo_path . $query_all);
 
+        // 
+
         // query for update
         $query_syntax = "UPDATE showroom_daffa_table SET nama_mobil='$nama_mobil', pemilik_mobil='$nama_pemilik', merk_mobil='$merk', tanggal_beli='$tanggal_beli', deskripsi='$deskripsi', status_pembayaran='$status_mobil'";
         $edit_query = mysqli_query($connection, $query_syntax);

@@ -75,3 +75,12 @@
 .submit-btn {
     width: 20%;
 }
+
+/* === List Car Body ==== */
+.detail-btn {
+    border-radius: 50%;
+}
+
+.delete-btn {
+    border-radius: 50%;
+}
