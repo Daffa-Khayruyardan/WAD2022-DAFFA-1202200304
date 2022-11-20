@@ -18,7 +18,7 @@
             <!-- EAD Logo Container -->
             <div class="logo ead-container">
                 <!-- Logo Image -->
-                <img src="asset/images/local/EAD_Logo.png" class="ead-logo" alt="EADLogo">
+                <img src="asset/images/EAD_Logo.png" class="ead-logo" alt="EADLogo">
 
                 <!-- Nama -->
                 <p class="nama">Daffa_1202200304</p>
@@ -27,7 +27,7 @@
 
         <!-- Right Body -->
         <div class="col HomeCar">
-            <img src="asset/images/local/HomeCar.png" alt="HomeCar" width="510" height="400">
+            <img src="asset/images/HomeCar.png" alt="HomeCar" width="510" height="400">
         </div>
     </div>
 </body>

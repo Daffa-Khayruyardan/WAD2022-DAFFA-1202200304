@@ -1,3 +1,5 @@
+<?php require './config/connector.php' ?>
+
 <html>
     <head>
         <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.min.css" />
@@ -11,7 +13,7 @@
                         <a href="../index.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? "" : "text-secondary" ?>">Home</a>
                     </li>
                     <li class="nav-item pt-3 pb-3 text-xl">
-                        <a href="pages/Add-DAFFA.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'ListCar-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
+                        <a href="<?php $jumlah_mobil == 0 ? "pages/Add-DAFFA.php" : "pages/ListCar-DAFFA.php"?>" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'ListCar-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
                     </li>
                 </ul>
             </div>

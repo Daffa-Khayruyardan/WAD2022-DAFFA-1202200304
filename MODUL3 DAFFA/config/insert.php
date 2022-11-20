@@ -1,7 +1,7 @@
 <?php 
     require 'connector.php';
 
-    if(isset($_POST["submit"])) {
+    if(isset($_POST["submit_car"])) {
          // data yang akan dimasukkan
         $nama_mobil = $_POST["nama"];
         $nama_pemilik = $_POST["pemilik"];
@@ -10,19 +10,20 @@
         $deskripsi = $_POST["deskripsi"];
         $status_mobil = $_POST["status"];
 
-        // // get filename 
-        // $filename = $_FILES["upload"]["name"];
-        // $tmp_name = $_FILES["upload"]["tmp_name"];
+        // dir path
+        $dir = "../asset/images/";
 
-        // // folder for upload
-        // $folder_target = "asset/images/";
+        // get filename that want to upload
+        $filename = $_FILES["upload_file"]["name"];
 
-        // move_uploaded_file($tmp_name,$folder_target); 
-        
-        // current car id
-        $id_mobil_sekarang = $jumlah_mobil + 1;
-    
-        $query = mysqli_query($connection, "INSERT INTO `showroom_daffa_table` (id_mobil,nama_mobil,pemilik_mobil,merk_mobil,tanggal_beli,deskripsi,status_pembayaran) VALUES('$id_mobil_sekarang','$nama_mobil','$nama_pemilik','$merk','$tanggal_beli','$deskripsi','$status_mobil')");
+        // move file has uploaded
+        move_uploaded_file($_FILES["upload_file"]["tmp_name"], $dir.$filename);
+
+        // get latest id_mobil
+        $id_mobil_sekarang = $jumlah_mobil+1;
+
+        // do query to mysql
+        $query = mysqli_query($connection, "INSERT INTO `showroom_daffa_table` (id_mobil,nama_mobil,pemilik_mobil,merk_mobil,tanggal_beli,deskripsi,foto_mobil,status_pembayaran) VALUES('$id_mobil_sekarang','$nama_mobil','$nama_pemilik','$merk','$tanggal_beli','$deskripsi','$filename','$status_mobil')");
 
         header("Location:/TUGAS_PRAKTIKUM_WAD/MODUL3%20DAFFA/pages/ListCar-DAFFA.php");
     }

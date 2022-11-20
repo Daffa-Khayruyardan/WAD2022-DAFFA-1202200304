@@ -44,11 +44,11 @@
 
             <!-- Deskripsi -->
             <label class="mb-2"><b>Deskripsi</b></label></br>
-            <input class="mb-2 input-rounded" name="deskripsi" type="text" ></br>
+            <textarea class="mb-2 input-rounded " name="deskripsi" type="text" ></textarea></br>
 
             <!-- Foto -->
             <label class="mb-1"><b>Foto</b></label></br>
-            <input class="mb-2 input-rounded" type="file" name="upload" class="foto" ></br>
+            <input class="mb-2 input-rounded" type="file" name="upload_file" class="foto" ></br>
 
             <!-- Status Pembayaran -->
             <label class="mb-1"><b>Status Pembayaran</b></label></br>
@@ -66,7 +66,7 @@
 
             <!-- Submit -->
             <div class="container submit-container">
-                <input type="submit" class="p-1 btn btn-primary submit-btn" name="submit" value="Selesai">
+                <input type="submit" class="p-1 btn btn-primary submit-btn" name="submit_car" value="Selesai">
             </div>
         </form>
 

@@ -16,7 +16,7 @@
                         <a href="../index.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? "" : "text-secondary" ?>">Home</a>
                     </li>
                     <li class="nav-item pt-3 pb-3 text-xl">
-                        <a href="pages/ListCar-DAFFA.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'ListCar-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
+                        <a href="../pages/Add-DAFFA.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'Add-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
                     </li>
                 </ul>
             </div>
@@ -40,7 +40,7 @@
 
         <!-- list of car -->
         <div class="card" class="col" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="../asset/images/<?php echo $car_list['foto_mobil']?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <!-- car information here -->
                 <h5 class="card-title"><?php echo $car_list['nama_mobil']?></h5>
@@ -48,13 +48,13 @@
 
                 <div class="container-fluid row">
                     <!-- get more detail -->
-                    <form action="./Detail-DAFFA.php" class="col">
+                    <form action="./Detail-DAFFA.php" method="post" class="col">
                         <input type="hidden" name="id_mobil_detail" value="<?php echo $car_list['id_mobil']?>">
                         <input type="submit" name="detail_car" value="Detail" class="btn btn-primary">
                     </form>
 
                     <!-- Input which car want to delete -->
-                    <form action="../config//delete.php" class="col">
+                    <form action="../config//delete.php" method="post" class="col">
                         <input type="hidden" name="id_mobil_hapus" value="<?php echo $car_list['id_mobil']?>">
                         <input type="submit" name="delete_car" value="Delete" class="btn btn-danger">
                     </form>
@@ -68,5 +68,9 @@
         ?>
 
         </div>
+
+        <?php 
+            echo "Jumlah Mobil: " . $jumlah_mobil
+        ?>
     </body>
 </html>
