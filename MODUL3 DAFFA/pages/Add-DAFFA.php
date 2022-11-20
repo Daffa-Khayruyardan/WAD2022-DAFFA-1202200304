@@ -1,4 +1,4 @@
-<?php require '../config/connector.php' ?>
+<?php require '../config/insert.php' ?>
 
 <html>
     <head>
@@ -30,27 +30,27 @@
 
             <!-- Nama Mobil -->
             <label class="mb-2"><b>Nama Mobil</b></label></br>
-            <input class="mb-2 input-rounded" name="nama" type="text" required></br>
+            <input class="mb-2 input-rounded" name="nama" type="text" ></br>
 
             <!-- Pemilik -->
             <label class="mb-2"><b>Nama Pemilik</b></label></br>
-            <input class="mb-2 input-rounded" name="pemilik" type="text" required></br>
+            <input class="mb-2 input-rounded" name="pemilik" type="text" ></br>
 
             <!-- Merk -->
             <label class="mb-2"><b>Merk</b></label></br>
-            <input class="mb-2 input-rounded" name="merk" type="text" required></br>
+            <input class="mb-2 input-rounded" name="merk" type="text" ></br>
 
             <!-- Tanggal Beli -->
             <label class="mb-2"><b>Tanggal Beli</b></label></br>
-            <input class="mb-2 input-rounded" name="tanggal_beli" type="date" required></br>
+            <input class="mb-2 input-rounded" name="tanggal_beli" type="date" ></br>
 
             <!-- Deskripsi -->
             <label class="mb-2"><b>Deskripsi</b></label></br>
-            <input class="mb-2 input-rounded" name="deskripsi" type="text" required></br>
+            <input class="mb-2 input-rounded" name="deskripsi" type="text" ></br>
 
             <!-- Foto -->
             <label class="mb-1"><b>Foto</b></label></br>
-            <input class="mb-2 input-rounded" name="foto" type="file" name="Pilih File" class="foto" required></br>
+            <input class="mb-2 input-rounded" name="foto" type="file" name="Pilih File" class="foto" ></br>
 
             <!-- Status Pembayaran -->
             <label class="mb-1"><b>Status Pembayaran</b></label></br>
@@ -58,18 +58,16 @@
             <!-- Pilihan -->
             <span>
                 <!-- Ya -->
-                <input type="radio" name="status" required>
+                <input type="radio" name="status" >
                 <label>Lunas</label>
 
                 <!-- Tidak -->
-                <input type="radio" name="status" required>
+                <input type="radio" name="status" >
                 <label>Belum Lunas</label>
             </span>
 
             <!-- Submit -->
-            <div class="container-fluid submit-container">
-                <input type="button" class="p-1 btn btn-primary submit-btn" name="submit" value="Selesai">
-            </div>
+            <input type="submit" class="p-1 btn btn-primary submit-btn" name="submit" value="Selesai">
         </form>
 
     </body>
