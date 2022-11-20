@@ -6,6 +6,30 @@
         <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css" />
     </head>
     <body>
+        <!-- get data from database -->
+        <?php
+            // get id 
+            $id_detail = $_POST["id_mobil_edit"];
+
+            $get_all_data = "SELECT * FROM showroom_daffa_table ORDER BY id_mobil";
+            $get_all_run = mysqli_query($connection, $get_all_data);
+
+            // make gloabl variable for data
+            global $nama_mobil;
+            global $pemilik_mobil;
+            global $merk_mobil;
+            global $deskripsi;
+
+            // membuat array data
+            while($row = mysqli_fetch_array($get_all_run)) {
+                $nama_mobil = $row["nama_mobil"];
+                $pemilik_mobil = $row["pemilik_mobil"];
+                $merk_mobil = $row["merk_mobil"];
+                $deskripsi = $row["deskripsi"];
+                $foto = $row["foto_mobil"];
+            }
+        ?>
+
         <!-- Navbar -->
         <nav class="navbar navbar-expand bg-primary">
             <div class="container-fluid">
@@ -30,22 +54,22 @@
         <div class="container-fluid row">
             <!-- car image -->
             <div class="container-fluid col">
-                <img src="asset/images/HomeCar.png" alt="car_image">
+                <img src="../asset/images/<?php echo $foto?>" alt="car_image" width="400" height="400">
             </div>
 
             <!-- Edit Form -->
-            <form action="" method="post" class="container row col">
+            <form action="../config/edit.php" method="post" class="container row col">
                 <!-- Nama Mobil -->
                 <label class="mb-2"><b>Nama Mobil</b></label></br>
-                <input class="mb-2 input-rounded" name="nama" type="text" ></br>
+                <input class="mb-2 input-rounded" value="<?php echo $nama_mobil?>" name="nama" type="text" ></br>
 
                 <!-- Pemilik -->
                 <label class="mb-2"><b>Nama Pemilik</b></label></br>
-                <input class="mb-2 input-rounded" name="pemilik" type="text" ></br>
+                <input class="mb-2 input-rounded" value="<?php echo $pemilik_mobil?>" name="pemilik" type="text" ></br>
 
                 <!-- Merk -->
                 <label class="mb-2"><b>Merk</b></label></br>
-                <input class="mb-2 input-rounded" name="merk" type="text" ></br>
+                <input class="mb-2 input-rounded" value="<?php echo $merk_mobil?>" name="merk" type="text" ></br>
 
                 <!-- Tanggal Beli -->
                 <label class="mb-2"><b>Tanggal Beli</b></label></br>
@@ -53,7 +77,7 @@
 
                 <!-- Deskripsi -->
                 <label class="mb-2"><b>Deskripsi</b></label></br>
-                <input class="mb-2 input-rounded" name="deskripsi" type="text" ></br>
+                <input class="mb-2 input-rounded" value="<?php echo $deskripsi?>" name="deskripsi" type="text" ></br>
 
                 <!-- Foto -->
                 <label class="mb-1"><b>Foto</b></label></br>
@@ -72,7 +96,7 @@
 
                 <!-- Edit -->
                 <div class="container submit-container">
-                    <input type="edit_car" class="p-1 btn btn-primary submit-btn" name="edit_car" value="Edit">
+                    <input type="submit" class="p-1 btn btn-primary submit-btn" name="edit_car" value="Edit">
                 </div>
             </form>
         </div>

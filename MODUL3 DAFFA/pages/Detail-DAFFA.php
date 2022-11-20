@@ -59,6 +59,9 @@
 
             <!-- Edit Form -->
             <form action="../pages/Edit-DAFFA.php" method="post" class="container row col">
+                <!-- post id_mobil -->
+                <input type="hidden" name="id_mobil_edit" value="<?php echo $row['id_mobil']?>">
+
                 <!-- Nama Mobil -->
                 <label class="mb-2"><b>Nama Mobil</b></label></br>
                 <input class="mb-2 input-rounded" value="<?php echo $nama_mobil?>" name="nama" type="text" ></br>
