@@ -1,5 +1,3 @@
-<?php require '../config/insert.php' ?>
-
 <html>
     <head>
         <link rel="stylesheet" href="../asset/style/index.css" />
@@ -21,7 +19,7 @@
         </nav>
 
         <!-- Add New Car Form -->
-        <form action="../index.php" method="post" class="ml-2 w-50 row container-fluid form-input">
+        <form action="../config//insert.php" method="POST" class="ml-2 w-50 row container-fluid form-input form-group" enctype="multipart/form-data">
             <!-- Title -->
             <div class="container-fluid mt-2 title-add">
                 <h4>Tambah Mobil</h4>
@@ -50,7 +48,7 @@
 
             <!-- Foto -->
             <label class="mb-1"><b>Foto</b></label></br>
-            <input class="mb-2 input-rounded" name="foto" type="file" name="Pilih File" class="foto" ></br>
+            <input class="mb-2 input-rounded" type="file" name="upload" class="foto" ></br>
 
             <!-- Status Pembayaran -->
             <label class="mb-1"><b>Status Pembayaran</b></label></br>
@@ -58,16 +56,18 @@
             <!-- Pilihan -->
             <span>
                 <!-- Ya -->
-                <input type="radio" name="status" >
+                <input type="radio" name="status" value="Lunas">
                 <label>Lunas</label>
 
                 <!-- Tidak -->
-                <input type="radio" name="status" >
+                <input type="radio" name="status" value="Belum Lunas">
                 <label>Belum Lunas</label>
             </span>
 
             <!-- Submit -->
-            <input type="submit" class="p-1 btn btn-primary submit-btn" name="submit" value="Selesai">
+            <div class="container submit-container">
+                <input type="submit" class="p-1 btn btn-primary submit-btn" name="submit" value="Selesai">
+            </div>
         </form>
 
     </body>

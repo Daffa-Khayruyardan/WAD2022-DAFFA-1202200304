@@ -6,6 +6,16 @@
         <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css" />
     </head>
     <body>
+        <!-- get data from database -->
+        <?php
+            // get id 
+            $id_detail = $_POST["id_mobil_hapus"];
+
+            // make query for get data
+            $query_syntax = "";
+            $detail_q
+        ?>
+
         <!-- Navbar -->
         <nav class="navbar navbar-expand bg-primary">
             <div class="container-fluid">

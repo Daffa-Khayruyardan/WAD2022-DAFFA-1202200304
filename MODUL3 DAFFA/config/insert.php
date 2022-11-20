@@ -8,22 +8,22 @@
         $merk = $_POST["merk"];
         $tanggal_beli = $_POST["tanggal_beli"];
         $deskripsi = $_POST["deskripsi"];
-        $foto_mobil = $_POST["foto"];
+        $status_mobil = $_POST["status"];
 
-        // the location store image
-        $target_loc = "asset/images" . basename($_FILES['image']['name']);
+        // // get filename 
+        // $filename = $_FILES["upload"]["name"];
+        // $tmp_name = $_FILES["upload"]["tmp_name"];
+
+        // // folder for upload
+        // $folder_target = "asset/images/";
+
+        // move_uploaded_file($tmp_name,$folder_target); 
         
-        // trying get submitted data from form
-        $image = $_FILES(['image']['name']);
+        // current car id
+        $id_mobil_sekarang = $jumlah_mobil + 1;
     
-        // insert data to database
-        $insert_query = mysqli_query($connection, "INSERT INTO showroom_daffa_table(nama_mobil,pemilik_mobil,merk_mobil,tanggal_beli,deskripsi,foto) VALUES('$nama_mobil','$nama_pemilik','$merk','$tanggal_beli','$deskripsi','$foto_mobil')");
+        $query = mysqli_query($connection, "INSERT INTO `showroom_daffa_table` (id_mobil,nama_mobil,pemilik_mobil,merk_mobil,tanggal_beli,deskripsi,status_pembayaran) VALUES('$id_mobil_sekarang','$nama_mobil','$nama_pemilik','$merk','$tanggal_beli','$deskripsi','$status_mobil')");
 
-        // now let's move the uploaded image into the folder asset/images
-        if(move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-            echo "success";
-        }else {
-            echo "failed";
-        }
+        header("Location:/TUGAS_PRAKTIKUM_WAD/MODUL3%20DAFFA/pages/ListCar-DAFFA.php");
     }
 ?>

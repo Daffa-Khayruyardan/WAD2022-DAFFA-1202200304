@@ -1,3 +1,7 @@
+<?php 
+    require '../config/connector.php';
+?>
+
 <html>
     <head>
         <link rel="stylesheet" href="../asset/style/index.css" />
@@ -9,10 +13,10 @@
             <div class="container-fluid">
                 <ul class="navbar-nav">
                     <li class="nav-item pt-3 pb-3 text-xl">
-                        <a href="" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? "" : "text-secondary" ?>">Home</a>
+                        <a href="../index.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? "" : "text-secondary" ?>">Home</a>
                     </li>
                     <li class="nav-item pt-3 pb-3 text-xl">
-                        <a href="pages/Add-DAFFA.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'ListCar-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
+                        <a href="pages/ListCar-DAFFA.php" style="text-decoration: none;" class="link-light <?php echo basename($_SERVER['PHP_SELF']) == 'ListCar-DAFFA.php' ? "" : "text-secondary"; ?>">MyCar</a>
                     </li>
                 </ul>
             </div>
@@ -24,11 +28,45 @@
             <p>List Show Room Daffa - 1202200304</p>
         </div>
 
-        <!-- List Of Cards -->
-        <div class="card">
-            <div class="card-header">Header</div>
-            <div class="card-body">Content</div>
-            <div class="card-footer">Footer</div>
+        <!-- open form here -->
+        <div class="container-fluid row">
+
+        <!-- Looping car in cards model -->
+        <?php 
+            $list_query = mysqli_query($connection, "SELECT * FROM showroom_daffa_table ORDER BY id_mobil");
+
+            while($car_list = mysqli_fetch_array($list_query)) {
+        ?> 
+
+        <!-- list of car -->
+        <div class="card" class="col" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <!-- car information here -->
+                <h5 class="card-title"><?php echo $car_list['nama_mobil']?></h5>
+                <p class="card-text"><?php echo $car_list['deskripsi']?></p>
+
+                <div class="container-fluid row">
+                    <!-- get more detail -->
+                    <form action="./Detail-DAFFA.php" class="col">
+                        <input type="hidden" name="id_mobil_detail" value="<?php echo $car_list['id_mobil']?>">
+                        <input type="submit" name="detail_car" value="Detail" class="btn btn-primary">
+                    </form>
+
+                    <!-- Input which car want to delete -->
+                    <form action="../config//delete.php" class="col">
+                        <input type="hidden" name="id_mobil_hapus" value="<?php echo $car_list['id_mobil']?>">
+                        <input type="submit" name="delete_car" value="Delete" class="btn btn-danger">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- end of list -->
+        <?php 
+            }
+        ?>
+
         </div>
     </body>
 </html>

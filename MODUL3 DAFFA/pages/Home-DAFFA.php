@@ -13,7 +13,7 @@
             <p class="lacus">At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis cursus vestibulum, facilisi ac, sed faucibus.</p>
 
             <!-- MyCar -->
-            <a href="<?php echo $tableExists !== FALSE ? "pages/Add-DAFFA.php" : "" ?>" class="mt-4 p-2 border rounded btn btn-primary text-white Mycar">MyCar</a>
+            <a href="<?php echo $jumlah_mobil == 0 ? "pages/Add-DAFFA.php" : "pages/ListCar-DAFFA.php"?>" class="mt-4 p-2 border rounded btn btn-primary text-white Mycar">MyCar</a>
 
             <!-- EAD Logo Container -->
             <div class="logo ead-container">

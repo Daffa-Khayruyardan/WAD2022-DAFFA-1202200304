@@ -7,8 +7,8 @@
     // Create connection
     $connection = new mysqli($server, $user, $passwd, $database);
 
-    // check if table exists
-    // global $tableExists;
-    // $tableExists = $connection->query("SELECT * FROM showroom_daffa_table WHERE id_mobil = 1");
+    // get columm
+    $get_all_table_row = mysqli_query($connection, "SELECT * FROM showroom_daffa_table");
+    $jumlah_mobil = mysqli_num_rows($get_all_table_row);  
 
 ?>
