@@ -67,3 +67,11 @@
     border: 2px solid black;
     padding-left: 20%;
 }
+
+.submit-container {
+    width: 20%;
+}
+
+.submit-btn {
+    width: 20%;
+}
