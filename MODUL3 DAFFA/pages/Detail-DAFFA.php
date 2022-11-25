@@ -65,7 +65,7 @@
                 <input type="hidden" name="id_mobil_edit" value="<?php echo $row['id_mobil_edit']?>">
 
                 <!-- Nama Mobil -->
-                <label class="mb-2"><b>Nama Mobil <?php echo $foto?></b></label></br>
+                <label class="mb-2"><b>Nama Mobil</b></label></br>
                 <input class="mb-2 input-rounded" value="<?php echo $nama_mobil?>" name="nama" type="text" ></br>
 
                 <!-- Pemilik -->
