@@ -2,7 +2,7 @@
             $server = "localhost";
             $user = "root";
             $passwd = "";
-            $database = "tp_wads";
+            $database = "tp_wad";
             
             // Create connection
             $connection = new mysqli($server, $user, $passwd, $database);

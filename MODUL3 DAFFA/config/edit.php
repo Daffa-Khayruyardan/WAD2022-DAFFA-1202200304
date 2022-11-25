@@ -2,13 +2,9 @@
             require './connector.php';
 
             if(isset($_POST['edit_car'])) {
-                // delete existed photo
-                $photo_path = "../asset/images/".$foto;
-                unlink($photo_path . $query_all);
-
                 //This is the directory where images will be saved 
                 $target = "../asset/images/"; 
-                $target = $target . basename( $_FILES['photo']['name']);
+                $target = $target . basename( $_FILES['upload_file']['name']);
 
                 // Writes the photo to the server
                 if(move_uploaded_file($_FILES['photo']['tmp_name'], $target)){
@@ -34,6 +30,10 @@
                 while($row = mysqli_fetch_array($get_all_run)) {
                     $foto = $row["foto_mobil"];
                 }
+
+                // delete existed photo
+                $photo_path = "../asset/images/".$foto;
+                unlink($photo_path . $query_all);
 
                 // query for update
                 $query_syntax = "UPDATE showroom_daffa_table nama_mobil='$nama_mobil', pemilik_mobil='$nama_pemilik', merk_mobil='$merk', tanggal_beli='$tanggal_beli', deskripsi='$deskripsi', status_pembayaran='$status_mobil'";
