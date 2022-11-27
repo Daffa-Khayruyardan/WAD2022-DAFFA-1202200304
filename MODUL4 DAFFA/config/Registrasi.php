@@ -18,9 +18,11 @@
         $id_user = $jumlah_users + 1;
 
         // run query insert user to table
-        $query_syntax = "INSERT INTO users(id,nama,email,pasword,no_hp) VALUES($id_user,$nama_user,$email_user,$password,$no_hp)";
+        $query_syntax = "INSERT INTO users (id,nama,email,password,no_hp) VALUES('$id_user','$nama_user','$email_user','$password','$no_hp')";
 
         // run insert user query
-        $query_syntax = mysqli_query($connection, $query_syntax);
+        $query_syntax_run = mysqli_query($connection, $query_syntax);
     }
+
+    header('Location:/TUGAS_PRAKTIKUM_WAD/MODUL4%20DAFFA/pages/Login-DAFFA.php');
 ?>

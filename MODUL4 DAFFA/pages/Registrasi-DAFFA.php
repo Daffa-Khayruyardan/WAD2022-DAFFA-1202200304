@@ -11,7 +11,7 @@
             </div>
 
             <!-- Login Form -->
-            <form action="./Registrasi-DAFFA.php" method="post">
+            <form action="../config/Registrasi.php" method="POST">
                 <!-- Login Title -->
                 <h1>Registrasi</h1>
 
@@ -29,11 +29,11 @@
 
                 <!-- Kata Sandi Input -->
                 <label>Kata Sandi</label></br>
-                <input type="text" value="passwd"></br>
+                <input type="text" name="passwd"></br>
 
                 <!-- Konfirmasi Kata Sandi Input -->
                 <label>Konfirmasi Kata Sandi</label></br>
-                <input type="text" value="confirm_passwd"></br>
+                <input type="text" name="confirm_passwd"></br>
 
                 <!-- Submit Button -->
                 <input type="submit" name="daftar" value="Daftar" class="btn btn-primary"></br>

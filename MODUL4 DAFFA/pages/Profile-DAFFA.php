@@ -28,33 +28,33 @@
     
             <!-- Email -->
             <label>Email</label>
-            <input type="text"></br>
+            <input type="text" name="email_update"></br>
     
             <!-- Nama -->
             <label>Nama</label>
-            <input type="text"></br>
+            <input type="text" name="name_update"></br>
     
             <!-- No. HP -->
             <label>Nomor Handphone</label>
-            <input type="text"></br>
+            <input type="text" name="no_hp_update"></br>
     
             <!-- Break Line -->
             <hr>
     
             <!-- Kata Sandi -->
             <label>Kata Sandi</label>
-            <input type="text"></br>
+            <input type="text" name="passwd_update"></br>
     
             <!-- Konfirmasi Kata Sandi -->
             <label>Konfirmasi Kata Sandi</label>
-            <input type="text"></br>
+            <input type="text" name="confirm_passwd_update"></br>
     
             <!-- Warna Navbar -->
             <label>Warna Navbar</label>
-            <input type="text"></br>
+            <input type="text" name="navbar_color"></br>
     
             <!-- Update -->
-            <input type="submit" class="btn btn-primary" value="update">
+            <input type="submit" name="profile_update" class="btn btn-primary" value="update">
         </form>
 
     </body>
