@@ -84,3 +84,8 @@
 .delete-btn {
     border-radius: 50%;
 }
+
+/* === Login Body === */
+.login-image {
+    width: 25%;
+}

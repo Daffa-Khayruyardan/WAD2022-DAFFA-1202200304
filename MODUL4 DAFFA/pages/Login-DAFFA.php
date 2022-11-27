@@ -1,13 +1,15 @@
+
+
 <html>
     <head>
-        <link rel="stylesheet" href="../asset/style/index.css" />
+        <link rel="stylesheet" href="asset/style/index.css" />
         <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css" />
     </head>
     <body>
         <!-- Login Page Container -->
         <div class="row">
-            <div class="col w-100">
-                <img src="../asset/images/LoginCar.jpg" alt="">
+            <div class="col">
+                <img src="../asset/images/LoginCar.png" alt="" class="w-75 h-100 login-image">
             </div>
 
             <!-- Login Form -->
@@ -17,11 +19,11 @@
 
                 <!-- Email Input -->
                 <label>Email</label></br>
-                <input type="text"></br>
+                <input type="text" name="email"></br>
 
                 <!-- Password Input -->
                 <label>Password</label></br>
-                <input type="text"></br>
+                <input type="text" name="password"></br>
 
                 <!-- Remember Me -->
                 <input type="checkbox">

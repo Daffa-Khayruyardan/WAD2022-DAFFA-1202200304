@@ -11,7 +11,7 @@
         <div class="container-fluid">
             <ul class="navbar-nav">
                 <li class="nav-item pt-3 pb-3 text-xl">
-                    <a href="pages/Login-DAFFA.php" style="text-decoration: none;" class="link-light">Home</a>
+                    <a href="../index.php" style="text-decoration: none;" class="link-light">Home</a>
                 </li>
                 <li class="nav-item pt-3 pb-3 text-xl">
                     <a href="pages/Login-DAFFA.php" style="text-decoration: none;" class="link-light">Login</a>
