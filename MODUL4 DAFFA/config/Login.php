@@ -27,6 +27,6 @@
     }
 
     $_SESSION['message-error'] = 'Login Tidak Berhasil';
-    header('location:/TUGAS_PRAKTIKUM_WAD/MODUL3%20DAFFA/');
+    header('location:/WAD2022-DAFFA-1202200304/MODUL4%20DAFFA/pages/HomeAfterLogin-DAFFA.php');
     exit();
 ?>

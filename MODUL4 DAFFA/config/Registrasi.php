@@ -24,5 +24,5 @@
         $query_syntax_run = mysqli_query($connection, $query_syntax);
     }
 
-    header('Location:/TUGAS_PRAKTIKUM_WAD/MODUL4%20DAFFA/pages/Login-DAFFA.php');
+    header('Location:/WAD2022_DAFFA_1202200304/MODUL4%20DAFFA/pages/Login-DAFFA.php');
 ?>

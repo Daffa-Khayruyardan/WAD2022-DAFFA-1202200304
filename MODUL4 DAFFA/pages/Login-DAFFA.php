@@ -1,5 +1,3 @@
-
-
 <html>
     <head>
         <link rel="stylesheet" href="asset/style/index.css" />
@@ -13,7 +11,7 @@
             </div>
 
             <!-- Login Form -->
-            <form action="" method="post" class="col">
+            <form action="../config/Login.php" method="post" class="col">
                 <!-- Login Title -->
                 <h1>Login</h1>
 
