@@ -82,44 +82,45 @@
             </div>
 
             {{-- input form add car --}}
-            <form action="" class="">
+            <form action="{{ route('') }}" method="POST" enctype="multipart/form-data" class="">
+                @csrf 
                 {{-- input field nama mobil --}}
                 <label class="form-label">Nama Mobil</label><br/>
-                <input class="form-control input-field" type="text">
+                <input name="name" class="form-control input-field" type="text">
 
                 {{-- input field nama pemilik --}}
                 <label class="form-label">Nama Pemilik</label><br/>
-                <input class="form-control input-field"  type="text">
+                <input name="owner" class="form-control input-field"  type="text">
 
                 {{-- input field merk --}}
                 <label class="form-label">Merk</label><br/>
-                <input class="form-control input-field" type="text">
+                <input name="brand" class="form-control input-field" type="text">
 
                 {{-- input field nama mobil --}}
                 <label class="form-label">Tanggal Beli</label><br/>
-                <input class="form-control input-field" type="text">
+                <input name="car" class="form-control input-field" type="text">
 
                 {{-- input field nama mobil --}}
                 <label class="form-label">Deskripsi</label><br/>
-                <textarea class="form-control input-field" name="" id="" cols="1" rows="4"></textarea> 
+                <textarea name="description" class="form-control input-field" name="" id="" cols="1" rows="4"></textarea> 
 
                 {{-- input field photo upload --}}
                 <label class="form-label">Foto</label><br/>
-                <input type="file" class="form-control input-field">
+                <input name="photo" type="file" class="form-control input-field">
 
                 {{-- check status pembayaran --}}
                 <label class="form-label">Status Pembayaran</label><br/>
 
                 {{-- chosee one --}}
-                <input type="radio">
+                <input name="status" type="radio">
                 <label class="form-label">Lunas</label>
 
                 {{-- choose two --}}
-                <input type="radio">
+                <input name="status" type="radio">
                 <label class="form-label">Belum Lunas</label><br/>
 
                 {{-- submit button --}}
-                <input type="submit" value="Selesai" class="btn btn-primary mt-3 submit-button">
+                <input type="submit" name="selesai" value="Selesai" class="btn btn-primary mt-3 submit-button">
             </form>
         </div>
     </body>

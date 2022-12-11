@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Showrooms extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'id',
+        'user_id',
+        'name',
+        'owner',
+        'brand',
+        'purchase_date',
+        'description',
+        'image',
+        'status',
+        'created_at',
+        'update_at'
+    ];
 }
