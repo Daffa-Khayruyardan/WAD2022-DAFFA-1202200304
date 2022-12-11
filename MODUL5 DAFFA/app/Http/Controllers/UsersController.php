@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Users;
 
 class UsersController extends Controller
 {
@@ -13,7 +14,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $Users = Users::all();
+        return view('Register')->with('register',$Users);
     }
 
     /**
@@ -23,7 +25,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('Register');
     }
 
     /**
@@ -34,7 +36,13 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Users::create([
+            'email'=> $request->email,
+            'name' => $request->nama,
+            'password'=> $request->kata_sandi,
+        ]);
+
+        return redirect()->route('/home');
     }
 
     /**

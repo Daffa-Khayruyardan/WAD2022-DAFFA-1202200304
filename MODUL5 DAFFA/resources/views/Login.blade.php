@@ -44,7 +44,7 @@
             {{-- right side of login page container --}}
             <div class="login-form-container d-flex">
                 {{-- form container --}}
-                <form class="container form-container">
+                <form action="" method="post" class="container form-container">
                     {{-- text title --}}
                     <h2>Login</h2>
 

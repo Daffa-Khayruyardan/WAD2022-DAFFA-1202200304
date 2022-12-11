@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Showrooms;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShowroomsController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,10 +35,6 @@ Route::get('/profile', function() {
     return view('Profile');
 });
 
-Route::get('/register', function() {
-    return view('Register');
-});
-
 Route::get('/login', function() {
     return view('Login');
 });
@@ -44,3 +43,4 @@ Route::get('/myItem', function() {
     return view('MyItem');
 });
 
+Route::resource('/register', UsersController::class);

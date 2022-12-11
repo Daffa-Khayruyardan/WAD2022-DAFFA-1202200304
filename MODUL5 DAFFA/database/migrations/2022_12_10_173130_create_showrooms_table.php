@@ -17,7 +17,7 @@ return new class extends Migration
     {
         Schema::create('showrooms', function (Blueprint $table) {
             $table->bigInteger('id',20)->unsigned()->unique()->primary();
-            $table->bigInteger('user_id',20)->unsigned()->foreignId('user_id')->references('id')->on('users');
+            // $table->bigInteger('user_id',20)->unsigned()->foreignId('user_id')->references('id')->on('users');
             $table->string('name',255);
             $table->string('owner',255);
             $table->string('brand',255);

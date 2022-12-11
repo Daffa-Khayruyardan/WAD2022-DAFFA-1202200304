@@ -48,38 +48,41 @@
             {{-- right side of login page container --}}
             <div class="login-form-container d-flex">
                 {{-- form container --}}
-                <form class="container form-container">
+                <form method="POST" action="{{ url('/register') }}" class="container form-container">
+                    @csrf 
+                    
+
                     {{-- text title --}}
-                    <h2>Register</h2>
+                    <h2>Registrasi</h2>
 
                     {{-- input field container --}}
                     <div class="mb-2">
                         <label class="form-label">Email</label>
-                        <input type="text" class="form-control input-field">
+                        <input name="email" type="text" class="form-control input-field">
                     </div>
 
                     {{-- input field container --}}
                     <div class="mb-2">
                         <label class="form-label">Nama</label>
-                        <input type="text" class="form-control input-field">
+                        <input name="nama" type="text" class="form-control input-field">
                     </div>
 
                     {{-- input field container --}}
                     <div class="mb-2">
                         <label class="form-label">Nomor Handphone</label>
-                        <input type="text" class="form-control input-field">
+                        <input name="no_hp" type="text" class="form-control input-field">
                     </div>
 
                     {{-- input field container --}}
                     <div class="mb-2">
                         <label class="form-label">Kata Sandi</label>
-                        <input type="text" class="form-control input-field">
+                        <input name="kata_sandi" type="text" class="form-control input-field">
                     </div>
 
                     {{-- input field container --}}
                     <div class="mb-2">
                         <label class="form-label">Konfirmasi Kata Sandi</label>
-                        <input type="text" class="form-control input-field">
+                        <input name="konfirmasi" type="text" class="form-control input-field">
                     </div>
 
                     {{-- register button --}}
